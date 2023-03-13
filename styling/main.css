@@ -646,3 +646,158 @@ ul {
   width: 400px;
 }
 /* end hotels */
+
+/* start testimonials */
+.tests {
+  position: relative;
+  background-image: url(/images/3333.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.tests::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 30%;
+}
+.tests .container {
+  position: relative;
+}
+.tests .tests-header h2 {
+  color: white;
+}
+.tests .tests-holder {
+  display: flex;
+  /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+  position: relative;
+  gap: 20px;
+  padding-bottom: 50px;
+}
+@media (max-width: 767px) {
+  .tests .tests-holder {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 50px;
+  }
+}
+.tests .tests-holder .arrow {
+  color: white;
+  font-size: 60px;
+  position: absolute;
+  z-index: 1111;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.tests .tests-holder .arrow:hover {
+  color: var(--main-color);
+}
+.tests .tests-holder .arr-1 {
+  left: 10%;
+}
+.tests .tests-holder .arr-2 {
+  right: 10%;
+}
+.tests .tests-holder .tests-box {
+  position: relative;
+  background-color: white;
+  width: 50%;
+  height: 350px;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .tests .tests-holder .arrow {
+    display: none;
+  }
+}
+
+.tests .tests-holder .tests-box .back-img {
+  position: relative;
+  height: 100px;
+  width: 100%;
+  background-image: url(/images/1111.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.tests .tests-holder .tests-box .back-img img {
+  position: absolute;
+  height: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid white;
+  border-radius: 50%;
+  top: 50%;
+}
+.tests .tests-holder .tests-box .info {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+}
+.tests .tests-holder .tests-box .info h3 {
+  text-transform: capitalize;
+  font-weight: 400;
+  padding-bottom: 10px;
+}
+.tests .tests-holder .tests-box .info h3 > span {
+  font-weight: 700;
+}
+.tests .tests-holder .tests-box .info .stars {
+  color: var(--main-color);
+  font-size: 12px;
+  letter-spacing: 4px;
+}
+.tests .tests-holder .tests-box .info p {
+  color: var(--third-color);
+  padding-top: 10px;
+  padding-bottom: 30px;
+  max-width: 60%;
+  margin: 0 auto;
+}
+.tests .tests-holder .tests-box .info a {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.tests .tests-holder .tests-box .info a:hover {
+  color: var(--third-color);
+}
+.tests .tests-holder .tests-box .info a::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 50px;
+  background-color: var(--main-color);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s;
+}
+.tests .tests-holder .tests-box .info a:hover::before {
+  width: 100%;
+}
+.data-slide {
+  width: 100%;
+}
+.data-slide ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.data-slide ul li {
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  background-color: #ccccccc2;
+  margin: 0 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.data-slide ul li.active {
+  background-color: #fff;
+}
+/* end testimonials */
